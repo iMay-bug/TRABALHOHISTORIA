@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Sementes do Rock: Música na Segunda Guerra Mundial</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --ruby-red: #8a63d2; /* Mantendo o roxo sutil do outro arquivo */
+            --off-white: #f0f0f0;
+            --night-blue: #0a0a0f;
+        }
+
+        /* Aplicando a fonte e cores base */
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: var(--night-blue);
+            color: var(--off-white);
+            overflow-x: hidden; /* Prevenir scroll horizontal */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(138, 99, 210, 0.4);
+        }
+
+        /* Animações de entrada com fade */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Animação da seta de rolagem */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        
+        /* Efeito de granulado de filme antigo */
+        .film-grain::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE7TME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTtUlEULA0A7-UrdqPdlevelAxAFAVAbjGENKKZHlcM72eDzvFcCSArhoBHCIwaitForAWAghDEcBSIch9upqDwFcAhAIn3EKoqKQagvUW0fBowGIIlOowXUXJgKMAznM7A8UA4V6sIpDRswATb1MVMUYBFpEwMAbUYAAGeAA3d3gKMAgnPaA86AACQRONU-MVAXAJA7lkIFFNAGkGMAjCzCDAzA4A6M19NYKAC_AcI19AWA43c1AWAyoAAD0A0hJgKMAjCzn1AqAUpJMCKAeYA4TMAwA2opz_loAloGBaAaBixN4-zLAHA4gAQMah4ZBgA_p3j-oQYACvu1A4gUAEVAwUPkPAABDeKA9ds2grSA4iA4YxA4kBwBAa4eC8HxoAODKMAhAagxIIBgP6flFAAiI2A1sJOBhAclAABKMAhggCACQ5kBEMsAAHDdR1AAbNu5A4AAnAQsBPS7ecCgAOhDAMBgA4A3g8Gv2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2wAIiMA4QMAw+P2a5A-gu02S3f7Ao07wv0i25x02-27X2wPA0Q4A7A0b88cAAAAASUVORK5CYII=);
+            z-index: 101; pointer-events: none; opacity: 0.08;
+        }
+
+        /* Animação da esteira de gêneros */
+        .scroller__inner {
+            display: flex; flex-wrap: nowrap; width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll { to { transform: translate(calc(-50%)); } }
+        
+        /* Overlay/Modal */
+        .genre-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(10, 10, 15, 0.9); z-index: 100;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+        }
+        .genre-overlay.active { opacity: 1; pointer-events: all; }
+        .genre-overlay__content {
+            transform: scale(0.9); transition: transform 0.4s ease;
+        }
+        .genre-overlay.active .genre-overlay__content { transform: scale(1); }
+        body.modal-open { overflow: hidden; }
+
+        /* ANIMAÇÃO DO AVIÃO E BOMBA */
+        #animation-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 110; pointer-events: none; overflow: hidden;
+            display: none;
+        }
+        #airplane {
+            position: absolute; top: 10%; left: 110%; /* Começa fora da tela, à direita */
+            width: 150px; height: auto;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+            transform: scaleX(-1); /* Vira o avião para a esquerda */
+        }
+        #airplane.flying { animation: fly-across 3s linear forwards; }
+        @keyframes fly-across {
+            0% { left: 110%; } /* Posição inicial: direita */
+            100% { left: -200px; } /* Posição final: esquerda */
+        }
+        
+        #bomb {
+            position: absolute;
+            width: 60px; 
+            height: auto;
+            top: calc(10% + 40px);
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+        #bomb.dropping {
+            animation: drop-bomb 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+            opacity: 1;
+        }
+        @keyframes drop-bomb {
+            0% { transform: translate(-50%, 0) scale(0.8) rotate(-45deg); opacity: 1; }
+            100% { transform: translate(-50%, 40vh) scale(1.5) rotate(-45deg); opacity: 0; }
+        }
+
+        #explosion {
+            position: absolute;
+            top: calc(10% + 40vh); 
+            width: 500px; 
+            height: auto;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+        #explosion.exploding {
+            animation: explode 0.7s ease-out forwards;
+        }
+        @keyframes explode {
+            0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+            70% { transform: translate(-50%, -50%) scale(1.6); } 
+            100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0; }
+        }
+        
+        main {
+            animation: screen-shake 0.5s ease-out forwards;
+            animation-play-state: paused;
+        }
+        main.shaking {
+            animation-play-state: running;
+        }
+        
+        @keyframes screen-shake {
+          0%, 100% { transform: rotate(0deg); }
+          20% { transform: translateX(-2px) rotate(-0.5deg); }
+          40% { transform: translateX(2px) rotate(0.5deg); }
+          60% { transform: translateX(-2px) rotate(0deg); }
+          80% { transform: translateX(2px) rotate(-0.5deg); }
+        }
+
+        /* Efeito Parallax */
+        #inicio {
+            background-attachment: fixed;
+        }
+
+        /* Efeito de pulsação no card do Rock */
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(138, 99, 210, 0.7); }
+            50% { box-shadow: 0 0 25px 10px rgba(138, 99, 210, 0); }
+        }
+        .pulsing-border {
+            animation: pulse 2.5s infinite;
+        }
+    </style>
+</head>
+<body class="bg-stone-900 text-stone-200">
+    <div class="film-grain"></div>
+    
+    <!-- CONTAINER DA ANIMAÇÃO -->
+    <div id="animation-container">
+        <img id="airplane" src="aviao.png" alt="Avião de guerra">
+        <img id="bomb" src="missel.png" alt="Bomba caindo">
+        <img id="explosion" src="explosao.png" alt="Explosão">
+    </div>
+
+    <!-- NAVEGAÇÃO FIXA -->
+    <nav class="fixed top-0 left-0 w-full bg-black/40 backdrop-blur-sm p-4 z-50 border-b border-gray-800/50">
+        <div class="container mx-auto flex justify-center space-x-4 md:space-x-8 text-sm md:text-base">
+            <a href="#inicio" class="transition-colors duration-300 hover:text-purple-400">Início</a>
+            <a href="#generos" class="transition-colors duration-300 hover:text-purple-400">Gêneros</a>
+            <a href="#introducao" class="transition-colors duration-300 hover:text-purple-400">Introdução</a>
+            <a href="#conclusao" class="transition-colors duration-300 hover:text-purple-400">Conclusão</a>
+        </div>
+    </nav>
+    
+    <main>
+    <!-- SLIDE 1: CAPA -->
+    <section id="inicio" class="min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d-d27a1d4?q=80&w=2070&auto=format&fit=crop&blend=000000&blend-alpha=50&blend-mode=multiply&bri=-20&con=20&sat=-100');">
+        <div class="absolute top-0 left-0 w-full h-full bg-black/70"></div>
+        <div class="z-10 p-4 reveal">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider text-glow" style="color: var(--ruby-red);">As Sementes do Rock</h1>
+            <p class="mt-4 text-xl md:text-2xl lg:text-3xl font-light">Música e Mudança na Segunda Guerra Mundial</p>
+            <p class="mt-8 text-lg md:text-xl text-gray-400">Por: Mayk, Bruno, Muriel, Marco Antonio, Gabriel Felipe</p>
+        </div>
+        <a href="#generos" class="absolute bottom-10 z-10 animate-bounce-slow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </a>
+    </section>
+
+    <!-- SLIDE 2: ESTEIRA DE GÊNEROS -->
+    <section id="generos" class="py-20" style="background-color: var(--night-blue);">
+        <div class="container mx-auto text-center mb-12 reveal">
+            <h2 class="text-4xl md-text-5xl font-bold text-glow" style="color: var(--ruby-red);">Os Sons que Moldaram uma Era</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-gray-300">Explore os gêneros que formaram a trilha sonora da época e deram origem a uma revolução. Clique em um card para saber mais.</p>
+        </div>
+        <div class="scroller w-full overflow-hidden" style="mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);">
+            <div class="scroller__inner">
+                <div class="flex">
+                    <!-- Cards normais -->
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Era do Swing" data-text="O Swing era a música pop da época. Com suas big bands e ritmo contagiante, dominava os salões de dança e as rádios, servindo de escape e união em tempos difíceis. Era a música da esperança e da celebração." data-video="bR3K5uB-wMA">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://images.unsplash.com/photo-1598387993441-a364f854c3e1?q=80&w=1935&auto=format&fit=crop&sat=-100')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Swing</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Alma do Blues" data-text="Nascido da dor e da resiliência da comunidade afro-americana, o Blues era a espinha dorsal emocional da música. Suas melodias e letras influenciaram profundamente todos os gêneros que vieram depois, especialmente o Rock." data-video="62mH0d_u0iE">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('blues.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Blues</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Improvisação do Jazz" data-text="O Jazz continuou a evoluir durante a guerra, com o surgimento do Bebop. Era uma música complexa e virtuosística, um campo de experimentação que empurrava os limites da harmonia e do ritmo, influenciando músicos em todo o mundo." data-video="3zx1Ztx-h_E">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('jazz.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Jazz</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Energia do Boogie-Woogie" data-text="Com seu ritmo de piano rápido e dançante, o Boogie-Woogie era pura energia. Era a trilha sonora perfeita para dançar e esquecer os problemas, e seu ritmo pulsante foi um ingrediente chave na fórmula do Rock 'n' Roll." data-video="v4yLeManl_c">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('boogie.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Boogie-Woogie</h3> </div>
+                    </a>
+                    <a href="#" id="rock-card" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group">
+                        <div class="pulsing-border w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://images.unsplash.com/photo-1550291652-6ea9114a47b1?q=80&w=2070&auto=format&fit=crop&sat=-100'); border: 2px solid var(--ruby-red);"> <h3 class="text-2xl font-bold text-glow" style="color: var(--ruby-red);">O Nascimento do Rock</h3></div>
+                    </a>
+                </div>
+                <div class="flex" aria-hidden="true">
+                    <!-- Cópia dos cards para o loop -->
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Era do Swing" data-text="O Swing era a música pop da época. Com suas big bands e ritmo contagiante, dominava os salões de dança e as rádios, servindo de escape e união em tempos difíceis. Era a música da esperança e da celebração." data-video="bR3K5uB-wMA">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://images.unsplash.com/photo-1598387993441-a364f854c3e1?q=80&w=1935&auto=format&fit=crop&sat=-100')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Swing</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Alma do Blues" data-text="Nascido da dor e da resiliência da comunidade afro-americana, o Blues era a espinha dorsal emocional da música. Suas melodias e letras influenciaram profundamente todos os gêneros que vieram depois, especialmente o Rock." data-video="62mH0d_u0iE">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('blues.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Blues</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Improvisação do Jazz" data-text="O Jazz continuou a evoluir durante a guerra, com o surgimento do Bebop. Era uma música complexa e virtuosística, um campo de experimentação que empurrava os limites da harmonia e do ritmo, influenciando músicos em todo o mundo." data-video="3zx1Ztx-h_E">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('jazz.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Jazz</h3> </div>
+                    </a>
+                    <a href="#" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group" data-title="A Energia do Boogie-Woogie" data-text="Com seu ritmo de piano rápido e dançante, o Boogie-Woogie era pura energia. Era a trilha sonora perfeita para dançar e esquecer os problemas, e seu ritmo pulsante foi um ingrediente chave na fórmula do Rock 'n' Roll." data-video="v4yLeManl_c">
+                        <div class="w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('boogie.png')"> <h3 class="text-2xl font-bold transition-colors duration-300 group-hover:text-purple-400">Boogie-Woogie</h3> </div>
+                    </a>
+                    <a href="#" id="rock-card-clone" class="genre-card w-64 h-80 mx-4 flex-shrink-0 group">
+                         <div class="pulsing-border w-full h-full bg-cover bg-center rounded-lg shadow-lg flex flex-col justify-end p-4 text-white text-center transition-all duration-500 group-hover:scale-105" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://images.unsplash.com/photo-1550291652-6ea9114a47b1?q=80&w=2070&auto=format&fit=crop&sat=-100'); border: 2px solid var(--ruby-red);"> <h3 class="text-2xl font-bold text-glow" style="color: var(--ruby-red);">O Nascimento do Rock</h3></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: INTRODUÇÃO -->
+    <section id="introducao" class="min-h-screen flex items-center justify-center py-20 px-4" style="background-color: var(--night-blue);">
+        <div class="container mx-auto text-center max-w-4xl reveal">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-glow" style="color: var(--ruby-red);">Qual era a "trilha sonora" da guerra?</h2>
+            <p class="text-lg md:text-xl mb-8 leading-relaxed font-light text-gray-300">
+                Enquanto o mundo estava em conflito, a música era uma forma de escape, propaganda e união. Os estilos mais populares eram o Swing e as Big Bands, como as de Glenn Miller e Duke Ellington, que animavam tanto os salões de dança quanto as tropas no front.
+            </p>
+        </div>
+    </section>
+    
+    <!-- SLIDE 4: CONCLUSÃO -->
+    <section id="conclusao" class="min-h-screen flex items-center justify-center py-20 px-4" style="background-color: var(--night-blue);">
+        <div class="container mx-auto text-center max-w-4xl reveal">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-glow" style="color: var(--ruby-red);">O Palco Estava Pronto</h2>
+            <p class="text-lg md:text-xl mb-8 leading-relaxed font-light text-gray-300">
+                A Segunda Guerra não teve "bandas de rock", mas ela acelerou as mudanças sociais, tecnológicas e culturais que tornaram o surgimento do Rock 'n' Roll inevitável. Foi o catalisador que misturou todos os ingredientes, preparando o mundo para a explosão que viria nos anos 50.
+            </p>
+            <div class="w-full h-64 bg-cover bg-center rounded-md shadow-xl border-2 border-gray-800" style="background-image: url('https://images.unsplash.com/photo-1618817594366-c6657c588b22?q=80&w=2070&auto=format&fit=crop&sat=-100&bri=-5');">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-black text-center p-10 border-t border-gray-800">
+        <h3 class="text-2xl font-bold mb-4" style="color: var(--ruby-red);">Fontes e Referências</h3>
+        <ul class="list-disc list-inside mx-auto max-w-2xl text-left text-gray-400">
+            <li>Em breve...</li>
+        </ul>
+        <p class="mt-8 text-gray-500 text-sm">Trabalho de História - 3ª Série, Sala 5</p>
+        <p class="text-gray-600 text-xs mt-2">Alunos: Mayk, Bruno, Muriel, Marco Antonio, Gabriel Felipe</p>
+    </footer>
+    </main>
+
+    <!-- OVERLAY/MODAL DOS GÊNEROS -->
+    <div id="genre-modal" class="genre-overlay">
+        <div class="genre-overlay__content bg-gray-900/90 backdrop-blur-sm w-11/12 max-w-4xl h-auto max-h-[90vh] rounded-lg shadow-2xl p-8 md:p-12 border border-gray-700 relative overflow-y-auto">
+            <button id="close-genre-modal" class="absolute top-4 right-4 text-white text-3xl transition-colors hover:text-purple-400">&times;</button>
+            <h2 id="modal-title" class="text-4xl md:text-5xl font-bold mb-4 text-glow" style="color: var(--ruby-red);"></h2>
+            <p id="modal-text" class="mb-6"></p>
+            <div id="modal-video-container" class="aspect-video rounded-md overflow-hidden shadow-2xl border-2 border-gray-800">
+                <iframe id="modal-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script para revelar elementos ao rolar a página
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Script para o modal de Gêneros
+            const genreModal = document.getElementById('genre-modal');
+            const openModalButtons = document.querySelectorAll('.genre-card:not(#rock-card):not(#rock-card-clone)');
+            const closeModalButton = document.getElementById('close-genre-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+            const modalVideo = document.getElementById('modal-video');
+            
+            const openModal = (card) => {
+                modalTitle.textContent = card.dataset.title;
+                modalText.textContent = card.dataset.text;
+                modalVideo.src = `https://www.youtube.com/embed/${card.dataset.video}`;
+                genreModal.classList.add('active');
+                document.body.classList.add('modal-open');
+            };
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(button);
+                });
+            });
+
+            const closeModal = () => {
+                genreModal.classList.remove('active');
+                document.body.classList.remove('modal-open');
+                modalVideo.src = '';
+            }
+            closeModalButton.addEventListener('click', closeModal);
+            genreModal.addEventListener('click', (e) => {
+                if (e.target === genreModal) closeModal();
+            });
+
+            // --- ANIMAÇÃO DO AVIÃO ---
+            const rockCards = document.querySelectorAll('#rock-card, #rock-card-clone');
+            const animationContainer = document.getElementById('animation-container');
+            const airplane = document.getElementById('airplane');
+            const bomb = document.getElementById('bomb');
+            const explosion = document.getElementById('explosion');
+            const mainContent = document.querySelector('main');
+
+            rockCards.forEach(rockCard => {
+                rockCard.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const cardRect = rockCard.getBoundingClientRect();
+                    const dropPositionX = cardRect.left + (cardRect.width / 2);
+
+                    bomb.style.left = `${dropPositionX}px`;
+                    explosion.style.left = `${dropPositionX}px`;
+
+                    animationContainer.style.display = 'block';
+                    airplane.classList.add('flying');
+
+                    setTimeout(() => {
+                        bomb.classList.add('dropping');
+                    }, 1300); 
+
+                    bomb.addEventListener('animationend', () => {
+                        explosion.classList.add('exploding');
+                        mainContent.classList.add('shaking');
+                        bomb.classList.remove('dropping');
+                    }, { once: true });
+
+                    explosion.addEventListener('animationend', () => {
+                        mainContent.classList.remove('shaking');
+                         setTimeout(() => {
+                            window.location.href = 'rock.html';
+                        }, 300);
+                    }, { once: true });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

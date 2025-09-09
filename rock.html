@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock 'n' Roll e a Guerra Fria</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Paleta de Cores Sutil - Inspirado na referência */
+        :root {
+            --bg-color: #0a0a0f; /* Preto profundo */
+            --text-color: #cccccc; /* Cinza claro */
+            --accent-color: #8a63d2; /* Roxo sutil e dessaturado */
+            --glow-color: rgba(138, 99, 210, 0.4);
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1, h2 {
+            color: var(--accent-color);
+        }
+        
+        /* Efeito de brilho sutil */
+        .text-glow {
+            text-shadow: 0 0 12px var(--glow-color);
+        }
+
+        /* Efeito de granulado de filme antigo */
+        .film-grain::after {
+            content: "";
+            position: fixed;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0.03;
+            animation: grain 8s steps(10) infinite;
+        }
+
+        @keyframes grain {
+          0%, 100% { transform: translate(0, 0); }
+          10% { transform: translate(-5%, -10%); }
+          20% { transform: translate(-15%, 5%); }
+          30% { transform: translate(7%, -25%); }
+          40% { transform: translate(-5%, 25%); }
+          50% { transform: translate(-15%, 10%); }
+          60% { transform: translate(15%, 0%); }
+          70% { transform: translate(0%, 15%); }
+          80% { transform: translate(3%, 35%); }
+          90% { transform: translate(-10%, 10%); }
+        }
+
+        /* Animação para seções aparecerem */
+        .topic-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .topic-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="film-grain">
+
+    <!-- NAVEGAÇÃO FIXA SUPERIOR -->
+    <nav class="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md p-4 z-50 border-b border-white/5">
+        <div class="container mx-auto flex justify-between items-center">
+            <h3 class="font-bold" style="color: var(--accent-color);">História da Música</h3>
+            <a href="index.html" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-300 group">
+                <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
+                Voltar ao Início
+            </a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO DA PÁGINA -->
+    <main id="main-content" class="container mx-auto px-4 py-24 md:py-32 cursor-pointer">
+        <div class="max-w-4xl mx-auto">
+            
+            <header class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 text-glow">O Rock e a Guerra Fria</h1>
+                <p class="text-lg text-gray-400 italic">A trilha sonora de uma revolução cultural e ideológica.</p>
+                <p id="instruction-text" class="mt-8 text-gray-500 animate-pulse">Pressione as teclas (1-5) ou clique na tela para revelar os tópicos.</p>
+            </header>
+            
+            <div class="space-y-20">
+                <section id="topic-1" class="topic-section">
+                    <h2 class="text-4xl font-bold mb-6 text-glow flex items-center gap-4"><span class="text-gray-600 text-5xl font-mono">1</span> Origem do Rock and Roll</h2>
+                    <div class="prose prose-invert prose-p:text-gray-300 prose-strong:text-gray-100 max-w-none text-lg leading-relaxed space-y-6 border-l-2 pl-6" style="border-color: var(--accent-color);">
+                        <h3>1.1 Contexto histórico e musical</h3>
+                        <p>O rock and roll surgiu nos Estados Unidos entre o final da década de 1940 e o início dos anos 1950. Esse novo gênero musical resultou da fusão de diferentes estilos populares, especialmente aqueles originários das comunidades afro-americanas, como o <strong>blues</strong>, o <strong>rhythm and blues (R&B)</strong>, o <strong>gospel</strong> e o <strong>jazz</strong>, combinados com elementos do <strong>country</strong> e do <strong>western</strong>. No período pós-Segunda Guerra Mundial, os Estados Unidos vivenciavam um processo de urbanização acelerada, crescimento econômico e fortalecimento da cultura de massa. A juventude, até então pouco considerada como público consumidor, passou a ser reconhecida como um novo agente cultural.</p>
+                        
+                        <h3>1.2 Características musicais e impacto social</h3>
+                        <p>O rock and roll se destacou por sua batida marcada, pelo uso da <strong>guitarra elétrica</strong> como instrumento central, e por letras que tratavam de temas como juventude, liberdade, rebeldia e relacionamentos. O gênero foi inicialmente criticado por setores conservadores, tanto por seu apelo sexual quanto por sua origem multirracial, em um contexto ainda marcado pela segregação.</p>
+                        
+                        <h3>1.3 Artistas pioneiros</h3>
+                        <p>Entre os principais nomes da primeira geração destacam-se <strong>Chuck Berry</strong>, <strong>Little Richard</strong>, Fats Domino, <strong>Elvis Presley</strong>, Jerry Lee Lewis e Buddy Holly. Esses artistas foram fundamentais para consolidar o rock como uma das expressões musicais mais influentes do século XX.</p>
+                    </div>
+                </section>
+
+                <section id="topic-2" class="topic-section">
+                    <h2 class="text-4xl font-bold mb-6 text-glow flex items-center gap-4"><span class="text-gray-600 text-5xl font-mono">2</span> O Rock and Roll e a Guerra Fria</h2>
+                    <div class="prose prose-invert prose-p:text-gray-300 prose-strong:text-gray-100 max-w-none text-lg leading-relaxed space-y-6 border-l-2 pl-6" style="border-color: var(--accent-color);">
+                        <h3>2.1 A música como arma cultural</h3>
+                        <p>Durante a Guerra Fria (1947–1991), o rock foi utilizado como instrumento de influência ideológica pelos Estados Unidos. A estratégia consistia em promover os valores ocidentais através da cultura popular. O rock passou a ser visto como uma forma de <strong>"soft power"</strong>, uma ferramenta de influência não militar que contribuía para o fortalecimento da imagem positiva do modelo ocidental capitalista, principalmente entre os jovens do bloco socialista.</p>
+
+                        <h3>2.2 A repressão nos países socialistas</h3>
+                        <p>Nos países sob influência soviética, o rock foi frequentemente alvo de censura. Os regimes comunistas o consideravam um símbolo do <strong>imperialismo cultural americano</strong>. Mesmo proibido, o acesso à música ocorria por meio de rádios estrangeiras, como a Voice of America, e gravações clandestinas. Na União Soviética, bandas como <strong>Kino</strong> e <strong>Aquarium</strong> formaram um movimento de resistência cultural importante nos anos 1980.</p>
+                        
+                        <h3>2.3 O papel simbólico do rock</h3>
+                        <p>O rock se tornou um símbolo de resistência, despertando nos jovens do Leste Europeu o desejo por um estilo de vida mais livre. Um exemplo emblemático foi o concerto de <strong>Bruce Springsteen na Alemanha Oriental</strong>, em 1988, que reuniu cerca de 300 mil pessoas e é frequentemente citado como um dos momentos culturais que antecederam a queda do Muro de Berlim.</p>
+
+                        <h3 class="!mt-12">2.4 A Era da MTV: O Auge do Soft Power Visual</h3>
+                        <p>Nos anos 80, o poder cultural do Ocidente atingiu seu auge com a ascensão da MTV. Videoclipes se tornaram uma nova e poderosa forma de exportar o estilo de vida, a moda e a música ocidental. Artistas como A-ha, com clipes inovadores como "Take On Me", transcenderam fronteiras e se tornaram fenômenos globais, representando a criatividade e a liberdade de expressão do mundo capitalista no final da Guerra Fria.</p>
+                        <div class="not-prose aspect-video rounded-lg overflow-hidden my-4 border-2 border-white/10">
+                            <iframe src="https://www.youtube.com/embed/aXJ_Ub1xbhw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="topic-3" class="topic-section">
+                    <h2 class="text-4xl font-bold mb-6 text-glow flex items-center gap-4"><span class="text-gray-600 text-5xl font-mono">3</span> A Influência do Rock no Brasil</h2>
+                    <div class="prose prose-invert prose-p:text-gray-300 prose-strong:text-gray-100 max-w-none text-lg leading-relaxed space-y-6 border-l-2 pl-6" style="border-color: var(--accent-color);">
+                        <h3>3.1 Chegada e adaptação do gênero</h3>
+                        <p>O rock chegou ao Brasil no final da década de 1950. O primeiro grande nome foi <strong>Celly Campello</strong>, com "Estúpido Cupido". Durante os anos 1960, o gênero influenciou o nascimento da <strong>Jovem Guarda</strong>, movimento liderado por Roberto Carlos, Erasmo Carlos e Wanderléa.</p>
+
+                        <h3>3.2 O rock como instrumento de contestação no regime militar</h3>
+                        <p>Durante a ditadura militar (1964–1985), o rock também teve papel político. Nos anos 1980, com a abertura política, o rock nacional passou a refletir preocupações sociais. Bandas como <strong>Legião Urbana, Titãs, Paralamas do Sucesso e Barão Vermelho</strong> abordavam temas como autoritarismo e desigualdade. Esse período ficou conhecido como a "explosão do rock brasileiro".</p>
+                    </div>
+                </section>
+                
+                <section id="topic-4" class="topic-section">
+                    <h2 class="text-4xl font-bold mb-6 text-glow flex items-center gap-4"><span class="text-gray-600 text-5xl font-mono">4</span> Conclusão</h2>
+                     <div class="prose prose-invert prose-p:text-gray-300 prose-strong:text-gray-100 max-w-none text-lg leading-relaxed space-y-6 border-l-2 pl-6" style="border-color: var(--accent-color);">
+                        <p>O rock and roll não foi apenas um fenômeno musical, mas uma expressão cultural de amplo alcance e impacto político. Surgido nos Estados Unidos, consolidou-se como a linguagem da juventude e, durante a Guerra Fria, transformou-se em uma ferramenta de disputa ideológica. Nos países socialistas, funcionou como símbolo de resistência e liberdade. No Brasil, foi adaptado aos contextos locais e desempenhou papel importante na crítica aos períodos de repressão política. Portanto, o rock deve ser compreendido como um fenômeno histórico que contribuiu para mudanças culturais profundas no mundo.</p>
+                    </div>
+                </section>
+
+                <section id="topic-5" class="topic-section">
+                    <h2 class="text-4xl font-bold mb-6 text-glow flex items-center gap-4"><span class="text-gray-600 text-5xl font-mono">5</span> Curiosidades</h2>
+                    <div class="prose prose-invert prose-p:text-gray-300 prose-strong:text-gray-100 max-w-none text-lg leading-relaxed space-y-6 border-l-2 pl-6" style="border-color: var(--accent-color);">
+                        <p><strong>Música nos Ossos:</strong> Na União Soviética, onde a música ocidental era proibida, fãs engenhosos criaram um mercado clandestino de discos gravados em chapas de raios-X descartadas, apelidados de "rock nos ossos". Eram gravações de baixa qualidade, mas representavam um poderoso ato de rebeldia cultural.</p>
+                        <p><strong>A Guitarra da Era Espacial:</strong> A Fender Stratocaster, ícone do rock, foi lançada em 1954 com um design futurista inspirado em carros e na tecnologia aeroespacial do pós-guerra, soando como o futuro e se alinhando perfeitamente com o espírito inovador da década.</p>
+                        <p><strong>Investigada pelo FBI:</strong> A canção "Louie Louie", na versão da banda The Kingsmen, foi alvo de uma investigação de 31 meses pelo FBI. Devido à gravação de baixa qualidade, surgiram boatos de que as letras eram obscenas. Após análises, o FBI concluiu que a letra era "ininteligível em qualquer velocidade" e arquivou o caso.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/50 text-center p-8 mt-20 border-t border-white/5">
+        <p class="text-gray-600 text-sm mb-2">Trabalho de História - 3ª Série, Sala 5</p>
+        <p class="text-gray-700 text-xs">Alunos: Mayk, Bruno, Muriel, Marco Antonio, Gabriel Felipe</p>
+    </footer>
+
+    <script>
+        // Inicializa os ícones Lucide
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- LÓgica DE NAVEGAÇÃO E ANIMAÇÃO ---
+            const mainContent = document.getElementById('main-content');
+            const sections = document.querySelectorAll('.topic-section');
+            const instructionText = document.getElementById('instruction-text');
+            let currentTopic = 0; // Contador para cliques
+
+            // Esconde todas as seções inicialmente
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const revealTopic = (topicNumber) => {
+                if (topicNumber < 1 || topicNumber > 5) return;
+
+                if (instructionText && instructionText.style.display !== 'none') {
+                    instructionText.style.transition = 'opacity 0.5s';
+                    instructionText.style.opacity = '0';
+                    setTimeout(() => instructionText.style.display = 'none', 500);
+                }
+
+                const targetSection = document.getElementById(`topic-${topicNumber}`);
+                if (targetSection) {
+                    if (targetSection.style.display === 'none') {
+                        targetSection.style.display = 'block';
+                        setTimeout(() => {
+                            targetSection.classList.add('is-visible');
+                        }, 10);
+                    }
+                    
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            };
+
+            // Navegação pelo teclado
+            document.addEventListener('keydown', (e) => {
+                const keyNum = parseInt(e.key);
+                if (keyNum >= 1 && keyNum <= 5) {
+                    e.preventDefault();
+                    currentTopic = keyNum; // Sincroniza o contador
+                    revealTopic(keyNum);
+                }
+            });
+
+            // Navegação por clique/toque
+            mainContent.addEventListener('click', (event) => {
+                // Só avança se o clique não foi em um link ou iframe
+                if (event.target.tagName === 'A' || event.target.tagName === 'IFRAME' || event.target.closest('a, iframe')) {
+                    return;
+                }
+                currentTopic++;
+                if (currentTopic > 5) {
+                    currentTopic = 1; // Volta para o primeiro tópico se passar do último
+                }
+                revealTopic(currentTopic);
+            });
+        });
+    </script>
+</body>
+</html>
+
